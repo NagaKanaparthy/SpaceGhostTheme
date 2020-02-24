@@ -1,6 +1,6 @@
 {
-  "name": "SpaceGhostTheme",
-  "version": "0.0.a",
+  "name": "spaceghosttheme",
+  "version": "0.0.1",
   "description": "Ghost CMS Theme Template that has a spacey theme.",
   "repository": "https://github.com/NagaKanaparthy/SpaceGhostTheme.git",
   "author": {
@@ -9,6 +9,11 @@
     "url": "https:/nvktrades.com"
   },
   "license": "MIT",
+  "keywords": [
+    "ghost",
+    "theme",
+    "ghost-theme"
+  ],
   "config": {
     "posts_per_page": 6
   }
