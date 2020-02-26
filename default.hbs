@@ -8,10 +8,23 @@
     <title>{{meta_title}}</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {{!-- Styles'n'Scripts --}}
+    {{!-- Ghost Default CSS --}}
+    {{!-- <link rel="stylesheet" type="text/css" href="{{asset "ghost.css"}}" /> --}}
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css" />
     {{!-- This tag outputs SEO meta+structured data and other important settings --}}
     {{ghost_head}}
 </head>
-<body>
+<body class="has-navbar-fixed-top">
+    {{navigation}}
+    <main class="container">
+        {{{body}}}
+    </main>
+    <footer class="footer">
+        <div class="content has-text-centered">
+            &copy; {{date format="YYYY"}}-2019 <a href="{{@site.url}}">{{@site.title}}</a> &mdash; Published with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
+        </div>
+    </footer>
     {{!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag --}}
     {{ghost_foot}}
 </body>

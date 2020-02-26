@@ -1,0 +1,50 @@
+<nav class="navbar is-fixed-top is-light">
+    <div class="navbar-brand">
+        {{#if @site.logo}}
+        <a class="navbar-item" href="{{@site.url}}"><img src="{{@site.logo}}" alt="{{@site.title}}" /></a>
+        {{else}}
+        <a class="navbar-item" href="{{@site.url}}">{{@site.title}}</a>
+        {{/if}}
+        <div class="navbar-end">
+            <!-- navbar items -->
+            <a role="button" class="navbar-burger" data-target="mainMenu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+    </div>
+    <div class="navbar-menu" id="mainMenu">
+        <div class="navbar-start">
+            {{#foreach navigation}}
+            <a class="navbar-item nav-{{slug}}
+            {{#if current}}{{/if}}" href="{{url absolute="true"}}">{{label}}</a>
+            {{/foreach}}
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Get all "navbar-burger" elements
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+            // Check if there are any navbar burgers
+            if ($navbarBurgers.length > 0) {
+
+                // Add a click event on each of them
+                $navbarBurgers.forEach(el => {
+                    el.addEventListener('click', () => {
+
+                        // Get the target from the "data-target" attribute
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+
+                        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+
+                    });
+                });
+            }
+        })
+    </script>
+</nav>
