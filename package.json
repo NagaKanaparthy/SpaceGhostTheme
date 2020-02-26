@@ -6,7 +6,7 @@
   "author": {
     "name": "Naga Varun Kanaparthy",
     "email": "naga@nvktrades.com",
-    "url": "https:/nvktrades.com"
+    "url": "https://nvktrades.com"
   },
   "license": "MIT",
   "keywords": [
@@ -14,7 +14,31 @@
     "theme",
     "ghost-theme"
   ],
+  "engines": {
+    "ghost": ">=3.0.0",
+    "ghost-api": "v3"
+  },
   "config": {
     "posts_per_page": 6
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.7.4",
+    "beeper": "^2.0.0",
+    "browser-sync": "^2.26.7",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-livereload": "^4.0.2",
+    "gulp-postcss": "^8.0.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-zip": "^5.0.1",
+    "postcss-color-function": "^4.1.0",
+    "postcss-custom-properties": "^9.1.1",
+    "postcss-easy-import": "^3.0.0",
+    "pump": "^3.0.0"
+  },
+  "scripts": {
+    "dev": "gulp",
+    "zip": "gulp zip",
+    "test": "gscan ."
   }
 }
