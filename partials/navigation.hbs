@@ -1,10 +1,13 @@
 <nav class="navbar is-fixed-top is-dark">
     <div class="navbar-brand">
+        <div class="navbar-item">
         {{#if @site.logo}}
         <a class="navbar-item" href="{{@site.url}}"><img src="{{@site.logo}}" alt="{{@site.title}}" /></a>
         {{else}}
         <a class="navbar-item" href="{{@site.url}}">{{@site.title}}</a>
         {{/if}}
+        </div>
+        <a href='https://ko-fi.com/P5P41E7B1' class="navbar-item" target='_blank'><img height='50' style='border:0px;height:50px;' src='https://az743702.vo.msecnd.net/cdn/kofi4.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
         <a role="button" class="navbar-burger" data-target="mainMenu">
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
@@ -12,13 +15,11 @@
         </a>
     </div>
     <div class="navbar-menu" id="mainMenu">
-        <div class="navbar-start">
+        <div class="navbar-end">
             {{#foreach navigation}}
             <a class="navbar-item nav-{{slug}}
             {{#if current}}{{/if}}" href="{{url absolute="true"}}">{{label}}</a>
             {{/foreach}}
-        </div>
-        <div class="navbar-end">
         </div>
     </div>
     <script>
