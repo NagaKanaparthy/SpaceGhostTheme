@@ -19,3 +19,9 @@
 .pagination-previous{
     color: white;
 }
+.index-box:hover{
+    background-color: yellow;
+    -webkit-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    transform: scale(1.03);
+}
