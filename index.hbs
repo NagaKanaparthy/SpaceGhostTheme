@@ -1,1 +1,21 @@
 {{!< default}}
+<div class="column">
+    <div class="tile is-ancestor ">
+        <div class="tile is-vertical is-parent">
+            {{#foreach posts}}
+            {{#if @odd}}
+            {{> "tile-card"}}
+            {{/if}}
+            {{/foreach}}
+        </div>
+        <div class="tile is-vertical is-parent">
+            {{#foreach posts}}
+            {{#if @even}}
+            {{> "tile-card"}}
+            {{/if}}
+            {{/foreach}}
+        </div>
+    </div>
+</div>
+
+{{pagination}}
