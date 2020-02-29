@@ -1,0 +1,18 @@
+<nav class="pagination is-rounded is-centered" role="navigation" aria-label="pagination">
+    {{#if prev}}
+    <a class="pagination-previous" href="{{page_url prev}}">Newer Posts</a>
+    {{/if}}
+    {{#unless prev}}
+        <a class="pagination-previous">The Start</a>
+    {{/unless}}
+    {{#if next}}
+    <a class="pagination-next" href="{{page_url next}}">Older Posts</a>
+    {{/if}}
+    {{#unless next}}
+        <a class="pagination-next">No More Posts</a>
+    {{/unless}}
+    <ul class="pagination-list">
+        <li><a href="#" class="pagination-link is-current" aria-current="page">{{page}} of {{pages}}</a></li>
+    </ul>
+
+</nav>
