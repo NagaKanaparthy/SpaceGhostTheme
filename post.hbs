@@ -1,1 +1,19 @@
 {{!< default}}
+<article class="has-text-white column">
+    {{#post}}
+    <h1 class="has-text-centered has-text-white title">{{title}}</h1>
+    <h2 class="has-text-centered has-text-white subtitle">Published on {{date published_at format="MMMM DD YYYY"}}
+        {{#foreach authors}}
+            {{#if @first}}
+            </br>
+            {{else}}
+            <small> </small>
+            {{/if}}
+            <a class="has-text-yellow">{{name}}</a>
+        {{/foreach}}
+    </h2>
+    <p>
+        {{content}}
+    </p>
+    {{/post}}
+</article>
