@@ -1,0 +1,21 @@
+<a href="{{url}}" class="tile is-child">
+    <div class="box">
+        <article class="media">
+            <div class="media-left">
+                <figure class="image is-64x64">
+                    <img src="{{feature_image}}">
+                </figure>
+            </div>
+            <div class="media-content">
+                <p><strong>{{title}}</strong>
+                    <small>{{reading_time}}</small>
+                    {{#primary_author}}
+                    <small>By @{{slug}} on {{date published_at format="MMMM DD YYYY"}}</small>
+                    {{/primary_author}}
+                    <br>
+                    {{excerpt}}
+                </p>
+            </div>
+        </article>
+    </div>
+</a>
