@@ -1,0 +1,31 @@
+{{!< default}}
+{{#author}}
+<div class="column">
+    <div class="box has-text-white" style="background-image: url({{cover_image}}); 
+    background-color: navy;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;">
+        <article class="media">
+            {{#if profile_image}}
+            <div class="media-left">
+                <figure class="image is-64x64">
+                    <img src="{{profile_image}}" alt="{{name}}'s Picture" />
+                </figure>
+            </div>
+            {{/if}}
+            <div class="media-content">
+                <p><small class="title has-text-white">{{name}}</small>
+                    <small class="subtitle has-text-white">@{{slug}}</small>
+                    {{#primary_author}}
+                    <small>{{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}}</small>
+                    {{/primary_author}}
+                    <br>
+                    {{#if bio}}{{bio}}{{/if}}
+                </p>
+            </div>
+        </article>
+    </div>
+</div>
+{{/author}}
+{{> tile-view}}
+{{pagination}}

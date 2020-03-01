@@ -1,0 +1,25 @@
+{{!< default}}
+{{#tag}}
+<div class="column">
+    <div class="box has-text-white" style="background-color: green;">
+        <article class="media">
+            {{#if feature_image}}
+            <div class="media-left">
+                <figure class="image is-64x64">
+                    <img src="{{feature_image}}" alt="{{name}}'s icon" />
+                </figure>
+            </div>
+            {{/if}}
+            <div class="media-content">
+                <p><small class="title has-text-white">{{name}}</small>
+                    <small class="subtitle has-text-white">@{{slug}}</small>
+                    <br>
+                    {{description}}
+                </p>
+            </div>
+        </article>
+    </div>
+</div>
+{{/tag}}
+{{> tile-view}}
+{{pagination}}
