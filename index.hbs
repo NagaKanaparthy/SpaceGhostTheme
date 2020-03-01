@@ -1,21 +1,29 @@
 {{!< default}}
-<div class="column">
-    <div class="tile is-ancestor ">
-        <div class="tile is-vertical is-parent">
-            {{#foreach posts}}
-            {{#if @odd}}
-            {{> "tile-card"}}
-            {{/if}}
-            {{/foreach}}
-        </div>
-        <div class="tile is-vertical is-parent">
-            {{#foreach posts}}
-            {{#if @even}}
-            {{> "tile-card"}}
-            {{/if}}
-            {{/foreach}}
-        </div>
+<div class="columns is-multiline is-mobile">
+    <div class="column is-mobile">
+        {{#foreach posts}}
+        {{#if @odd}}
+        {{> "tile-card"}}
+        {{/if}}
+        {{/foreach}}
     </div>
+    {{#foreach posts}}
+    {{#has index="1"}}
+    <div class="column is-mobile">
+    {{/has}}
+    {{/foreach}}
+
+    {{#foreach posts}}
+    {{#if @even}}
+    {{> "tile-card"}}
+    {{/if}}
+    {{/foreach}}
+
+    {{#foreach posts}}
+    {{#has index="1"}}
+    </div>
+    {{/has}}
+    {{/foreach}}
 </div>
 
 {{pagination}}

@@ -11,34 +11,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     {{!-- Styles'n'Scripts --}}
     {{!-- Ghost Default CSS --}}
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/bulma.min.css"}}" />
     <link rel="stylesheet" type="text/css" href="{{asset "css/ghost.css"}}" />
     <link rel="stylesheet" type="text/css" href="{{asset "css/space.css"}}" />
     <link rel="stylesheet" type="text/css" href="{{asset "css/custom.css"}}" />
+
     {{!-- This tag outputs SEO meta+structured data and other important settings --}}
     {{ghost_head}}
 </head>
 
-<body class="columns">
-    <div class="stars">
-        <div class="twinkling">
-            <div class="clouds column">
-                {{navigation}}
-                <main class="container" >
-                    {{{body}}}
-                </main>
-                <footer class="footer has-text-white is-transparent">
-                    <div class="content has-text-centered">
-                        &copy; {{date format="YYYY"}}-2019 <a href="{{@site.url}}">{{@site.title}}</a> &mdash;
-                        Published
-                        with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
-                    </div>
-                </footer>
-            </div>
+<body>
+    <div class="universe-wrapper">
+        <div class="stars-wrapper" id="stars-wrapper">
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function(){
+                for (i = 0; i < 300; i++){
+                    var starDiv = document.createElement("div");
+                    starDiv.classList.add("stars");
+                    starDiv.classList.add("s"+i);
+                    document.getElementById("stars-wrapper").appendChild(starDiv); 
+                }
+            });
+        </script>
+        <div class="column">
+            {{navigation}}
+            <main class="column">
+                {{{body}}}
+            </main>
+            <footer class="footer has-text-white is-transparent">
+                <div class="content has-text-centered">
+                    &copy; {{date format="YYYY"}}-2019 <a href="{{@site.url}}">{{@site.title}}</a> &mdash;
+                    Published
+                    with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
+                </div>
+            </footer>
+            {{!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag --}}
+            {{ghost_foot}}
         </div>
     </div>
-    {{!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag --}}
-    {{ghost_foot}}
 </body>
 
 </html>
