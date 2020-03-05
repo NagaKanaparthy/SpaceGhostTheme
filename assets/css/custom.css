@@ -21,13 +21,16 @@
 .pagination-next:hover,
 .pagination-previous:hover,
 .index-box:hover {
-  color: yellow;
+  color: black;
+  font-weight: bold;
+  background-color: yellow;
 }
 a {
   color: yellow;
 }
 a:hover {
   color: coral;
+  font-weight: bold;
 }
 h1 {
   font-size: 3rem;
