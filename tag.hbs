@@ -22,4 +22,13 @@
 </div>
 {{/tag}}
 {{> tile-view}}
+<div class="has-text-centered has-text-white">
+    <strong class="has-text-white">Other Tags: </strong>
+    {{#get "tags"}}
+    {{#foreach tags}}
+    <a href="{{url}}"><span class="tag is-medium is-light">{{name}}</span></a>
+    {{/foreach}}
+    {{/get}}
+</div>
+<br>
 {{pagination}}

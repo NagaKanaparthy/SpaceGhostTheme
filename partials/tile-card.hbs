@@ -1,20 +1,32 @@
-<a href="{{url}}" class="column">
-    <div class="box index-box">
+<a href="{{url}}" class="column has-text-black">
+    <div class="box index-box ">
         <article class="media">
+            {{#if feature_image}}
             <div class="media-left">
                 <figure class="image is-64x64">
                     <img src="{{feature_image}}">
                 </figure>
             </div>
+            {{/if}}
             <div class="media-content">
-                <p><strong>{{title}}</strong>
-                    <small>{{reading_time}}</small>
-                    {{#primary_author}}
-                    <small>By @{{slug}} on {{date published_at format="MMMM DD YYYY"}}</small>
-                    {{/primary_author}}
-                    <br>
-                    {{excerpt}}
-                </p>
+                <strong>{{title}}</strong>
+                <small>{{reading_time}}</small>
+                {{#primary_author}}
+                <small>By @{{slug}} on {{date published_at format="MMMM DD YYYY"}}</small>
+                {{/primary_author}}
+                <br>
+                {{#if tags}}
+                {{#foreach tags}}
+                {{#has index="0"}}
+                <span class="tag is-light is-primary">{{name}}</span>
+                {{else}}
+                <span class="tag is-light">{{name}}</span>
+                {{/has}}
+                {{/foreach}}
+                {{/if}}
+                <br>
+                {{excerpt}}
+
             </div>
         </article>
     </div>

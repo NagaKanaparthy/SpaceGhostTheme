@@ -1,30 +1,51 @@
-.is-transparent{
-    background-color: rgba(0, 0, 0, 0);;
+.is-transparent {
+  background-color: rgba(0, 0, 0, 0);
 }
 .card {
-    border-radius: 25px;
+  border-radius: 25px;
 }
-.card-footer{
-    border-radius: 0px 0px 25px 25px;
+.card-footer {
+  border-radius: 0px 0px 25px 25px;
 }
-.card-header{
-    border-radius: 25px 25px 0px 0px;
+.card-header {
+  border-radius: 25px 25px 0px 0px;
 }
-.footer{
-    padding: 3rem 1.5rem 1.5rem;
+.footer {
+  padding: 3rem 1.5rem 1.5rem;
 }
-.pagination-next{
-    color: white;
+.pagination-next {
+  color: white;
 }
-.pagination-previous{
-    color: white;
+.pagination-previous {
+  color: white;
 }
-.index-box:hover{
-    background-color: yellow;
-    -webkit-transform: scale(1.03);
-    -ms-transform: scale(1.03);
-    transform: scale(1.03);
+.index-box:hover {
+  background-color: yellow;
+  -webkit-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+  transform: scale(1.03);
 }
-a{
-    color: yellow;
+a {
+  color: yellow;
+}
+a:hover {
+  color: coral;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2.5rem;
+}
+h3 {
+  font-size: 2rem;
+}
+h4 {
+  font-size: 1.5rem;
+}
+h5 {
+  font-size: 1.25rem;
+}
+h6 {
+  font-size: 1rem;
 }
