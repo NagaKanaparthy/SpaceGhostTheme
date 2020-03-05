@@ -13,17 +13,15 @@
 .footer {
   padding: 3rem 1.5rem 1.5rem;
 }
-.pagination-next {
-  color: white;
-}
+.pagination-next,
 .pagination-previous {
   color: white;
 }
+.pagination-link:hover,
+.pagination-next:hover,
+.pagination-previous:hover,
 .index-box:hover {
-  background-color: yellow;
-  -webkit-transform: scale(1.03);
-  -ms-transform: scale(1.03);
-  transform: scale(1.03);
+  color: yellow;
 }
 a {
   color: yellow;
