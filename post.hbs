@@ -1,6 +1,6 @@
 {{!< default}}
 {{#post}}
-<article class="has-text-white column">
+<article class="has-text-white has-text-centered column">
     <h1 class="has-text-centered has-text-white title">{{title}}</h1>
     <h2 class="has-text-centered has-text-white subtitle">Published on {{date published_at format="MMMM DD YYYY"}}
         {{#foreach authors}}
@@ -12,12 +12,12 @@
         <a href="{{url}}">{{name}}</a>
         {{/foreach}}
     </h2>
-    <div class="has-text-centered">
+    <div>
         <strong class="has-text-white">Tags: </strong>
         {{#if tags}}
         {{#foreach tags}}
         {{#has index="0"}}
-        <a href="{{url}}"><span class="tag is-medium is-light is-primary">{{name}}</span></a>
+        <a href="{{url}}"><span class="tag is-medium is-light is-dark">{{name}}</span></a>
         {{else}}
         <a href="{{url}}"><span class="tag is-medium is-light">{{name}}</span></a>
         {{/has}}

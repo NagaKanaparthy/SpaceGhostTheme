@@ -1,14 +1,16 @@
 <nav class="navbar is-fixed-top is-dark">
     <div class="navbar-brand">
         <div class="navbar-item">
-        {{#if @site.logo}}
-        <a class="navbar-item" href="{{@site.url}}"><img src="{{@site.logo}}" alt="{{@site.title}}" /></a>
-        {{else}}
-        <strong><a class="navbar-item has-text-white" href="{{@site.url}}">{{@site.title}}</a></strong>
-        {{/if}}
+            {{#if @site.logo}}
+            <a class="navbar-item" href="{{@site.url}}"><img src="{{@site.logo}}" alt="{{@site.title}}" /></a>
+            {{else}}
+            <strong><a class="navbar-item has-text-white" href="{{@site.url}}">{{@site.title}}</a></strong>
+            {{/if}}
         </div>
-        <a href='https://ko-fi.com/P5P41E7B1' class="navbar-item" target='_blank'><img height='50' style='border:0px;height:50px;' src='https://az743702.vo.msecnd.net/cdn/kofi4.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
-        <a role="button" class="navbar-burger" data-target="mainMenu">
+        <a rel="noreferrer" href='https://ko-fi.com/P5P41E7B1' class="navbar-item" target='_blank'><img height='50'
+                style='border:0px;height:50px;' src='https://az743702.vo.msecnd.net/cdn/kofi4.png?v=2' border='0'
+                alt='Buy Me a Coffee at ko-fi.com' /></a>
+        <a class="navbar-burger" data-target="mainMenu">
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>

@@ -7,6 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     {{!-- Base Meta --}}
     <title>{{meta_title}}</title>
+    {{#if meta_description}}
+    <meta name="description" content="{{meta_description}}" />
+    {{else}}
+    <meta name="description" content="{{@site.description}}" />
+    {{/if}}
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     {{!-- Styles'n'Scripts --}}
@@ -25,12 +30,12 @@
         <div class="stars-wrapper" id="stars-wrapper">
         </div>
         <script>
-            document.addEventListener("DOMContentLoaded", function(){
-                for (i = 0; i < 300; i++){
+            document.addEventListener("DOMContentLoaded", function () {
+                for (i = 0; i < 300; i++) {
                     var starDiv = document.createElement("div");
                     starDiv.classList.add("stars");
-                    starDiv.classList.add("s"+i);
-                    document.getElementById("stars-wrapper").appendChild(starDiv); 
+                    starDiv.classList.add("s" + i);
+                    document.getElementById("stars-wrapper").appendChild(starDiv);
                 }
             });
         </script>
