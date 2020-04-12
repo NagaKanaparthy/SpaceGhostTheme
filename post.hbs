@@ -1,20 +1,20 @@
 {{!< default}}
 {{#post}}
-<article class="has-text-white has-text-centered column">
-    <h1 class="has-text-centered has-text-white title">{{title}}</h1>
-    <h2 class="has-text-centered has-text-white subtitle">Published on {{date published_at format="MMMM DD YYYY"}}
-        {{#foreach authors}}
-        {{#if @first}}
-        </br>
-        {{else}}
-        <small> </small>
-        {{/if}}
-        <a href="{{url}}">{{name}}</a>
-        {{/foreach}}
-    </h2>
-    <div>
-        <strong class="has-text-white">Tags: </strong>
+<article class="has-text-white has-text-justified column is-rounded ">
+    <div class="has-text-centered column">
+        <h1 class="has-text-centered has-text-white title">{{title}}</h1>
+        <h2 class="has-text-centered has-text-white subtitle">Published on {{date published_at format="MMMM DD YYYY"}}
+            {{#foreach authors}}
+            {{#if @first}}
+            </br>
+            {{else}}
+            <small> </small>
+            {{/if}}
+            <a href="{{url}}">{{name}}</a>
+            {{/foreach}}
+        </h2>
         {{#if tags}}
+        <strong class="has-text-white">Tags: </strong>
         {{#foreach tags}}
         {{#has index="0"}}
         <a href="{{url}}"><span class="tag is-medium is-light is-dark">{{name}}</span></a>
@@ -24,10 +24,11 @@
         {{/foreach}}
         {{/if}}
     </div>
-    <p>
+    <div class="section postBG">
         {{content}}
-    </p>
+    </div>
 </article>
+<br>
 <nav class="pagination is-rounded is-centered" role="navigation" aria-label="pagination">
     {{#prev_post}}
     <a class="pagination-previous" href="{{url}}">{{title}}</a>

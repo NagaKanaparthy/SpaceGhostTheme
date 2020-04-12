@@ -50,3 +50,18 @@ h5 {
 h6 {
   font-size: 1rem;
 }
+strong{
+  color: #fff;
+}
+.postBG{
+  background-color: #282828;
+}
+article img {
+  display: unset;
+}
+.kg-gallery-container {
+  display: unset;
+}
+.section{
+  padding: 0.25rem 1rem 1.5rem 1.5rem;
+}
